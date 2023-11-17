@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgba(9, 8, 8, 0.95);
+}
+
+/************/
+.menu-container {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+
+    &.close {
+        transform: translateX(-100%);
+        width: 20vw;
+        transition: all 2s ease-in-out;
+    }
+
+    &.open {
+        border-radius: 0% 70% 80% 0%;
+        width: 15vw;
+        transition: 1s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+        &.open {
+            width: 20vw;
+            transition: 1s ease-in-out;
+            /* Ajusta el ancho cuando está abierto en pantallas pequeñas */
+        }
+    }
+}
+
+@keyframes backMenu {
+    0% {
+        border: solid salmon;
+        background-image: radial-gradient(circle at bottom left, #530080, #000080);
+    }
+
+    50% {
+        border: solid salmon;
+        background-image: radial-gradient(circle at bottom left, #7D0080, #2b0080);
+    }
+
+    100% {
+        border: solid salmon;
+        background-image: radial-gradient(circle at bottom left, #800037, #540080);
+    }
+}
+
+.menu {
+    width: inherit;
+    /* Ajusta el ancho del menú según tus necesidades */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: inherit;
+
+    &.open {
+        transition: 0.01s ease-out;
+        background-image: radial-gradient(circle at bottom left, #530080, #000080);
+    }
+
+    &.close {
+        animation: 2s backMenu;
+    }
+}
+
+.menu-items {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    height: 100%;
+    /* Asegura que ocupe toda la altura del contenedor */
+}
+
+.menu-item {
+    height: 10vh;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 700;
+    color: white;
+    background-color: radial-gradient(circle at bottom left, #530080, #000080);
+}
+
+.menu-item p {
+    margin-top: 3vh;
+
+}
+
+.menu-button {
+    position: fixed;
+    z-index: 999;
+    top: 1vh;
+    left: 4vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

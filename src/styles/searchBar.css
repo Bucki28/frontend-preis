@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.search {
+    display: block;
+    left: 10vw;
+    top: 3vh;
+
+
+    .barra {
+        width: 70vw;
+    }
+
+}

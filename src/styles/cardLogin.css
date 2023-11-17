@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: grid;
+    place-content: center;
+}
+
+code {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+/* Estilo personalizado para la tarjeta */
+#login-card {
+    /* Fondo oscuro */
+    color: #fff;
+    background-color: #1749bd;
+}
+
+/* Estilo personalizado para el enlace "ya tengo cuenta" */
+.login-card a.nav-link {
+    color: #f6ff00;
+    font-weight: bold;
+    /* Azul */
+}
+
+/* Estilo personalizado para el botón de Google */
+.login-card button.btn-primary {
+    background-color: #4285f4;
+    /* Azul de Google */
+    border-color: #4285f4;
+    /* Azul de Google */
+}
+
+/* Estilo personalizado para el texto "O REGISTRATE CON" */
+.login-card p {
+    color: #f8f8f8;
+    /* Azul */
+}
+
+/* Estilo personalizado para el texto de error de correo electrónico */
+.login-card .text-danger {
+    color: #dc3545;
+    /* Rojo de Bootstrap para errores */
+}
